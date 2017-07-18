@@ -4,13 +4,13 @@ var input = [ 10, 15, 20, 25, 30, 35 ];
 function sum (array) {
   // your code here
   return array.reduce(function(initialValue, element){
-    console.log(initialValue);
-    console.log(element);
+    // console.log(initialValue);
+    // console.log(element);
     return initialValue + element;
   });
 }
 
-console.log(sum(input));
+// console.log(sum(input));
 
 var input1 = [[ 1, 2, 3 ],  //row
              [ 4, 5 ],
@@ -21,22 +21,22 @@ var input1 = [[ 1, 2, 3 ],  //row
 function productAll (array) {
   // your code here
   return array.reduce(function(product, row){
-    console.log('product ', product);
-    console.log('row ', row);
+    // console.log('product ', product);
+    // console.log('row ', row);
     //product starts at 1. will hold all the results of reduce on each row
     //
     product *= row.reduce(function(prev, current){
-      console.log('prev ', prev);
-      console.log('current ', current);
-      console.log(prev * current);
+      // console.log('prev ', prev);
+      // console.log('current ', current);
+      // console.log(prev * current);
       return prev * current;
     });
-    console.log(product);
+    // console.log(product);
     return product;
   }, 1);
 }
 
-console.log(productAll(input1));
+// console.log(productAll(input1));
 
 
 var cartoonsObject = [[ 'Thundercats', '80s' ], //row
@@ -85,7 +85,7 @@ function luckyNumbers (array) {
     }
     return previous + current + ", ";
     console.log(previous + current);
-  }, "Your lucky numbers are ");
+  }, "Your lucky numbers are: ");
 }
 
 luckyNumbers(input3);

@@ -1,17 +1,33 @@
 function onlyEven (array) {
-  // your code here
+  return array.filter(number => number % 2 === 0);
 };
 
 function onlyOneWord (array) {
-  // your code here
+  return array.filter(string => !string.includes(' '));
 };
 
 function positiveRowsOnly (array) {
-  // your code here
+  return array.filter(function(array2){
+    return array2.filter(function(number){
+      return !array2.number.includes('-');
+    });
+  });
 };
 
 function allSameVowels (array) {
-  // your code here
+  return array.filter(function(word){
+    if (word.includes('a') && !word.includes('e','i','o','u')) {
+      return word;
+    } else if (word.includes('e') && !word.includes('a','i','o','u')) {
+      return word;
+    } else if (word.includes('i') && !word.includes('a','e','o','u')) {
+      return word;
+    } else if (word.includes('o') && !word.includes('a','e','i','u')) {
+      return word;
+    } else if (word.includes('u') && !word.includes('a','e','i','o')) {
+      return word;
+    }
+  });
 };
 
 module.exports = {
